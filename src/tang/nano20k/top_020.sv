@@ -850,7 +850,7 @@ always @(posedge clk_28m, posedge rst_28m, posedge reset) begin
       FLASH_STATE_INIT: begin
         if (clk7n_en && flash_ready_d2) begin
           case(osd_kickstart)
-                  2'b00: flash_addr <= 22'h380000; // Kickstart 1.3 (at 7,25 MB, 256k)
+                  2'b00: flash_addr <= 22'h3A0000; // Kickstart 1.3 (at 7,25 MB, 256k)
                   2'b01: flash_addr <= 22'h200000; // Kickstart 3.1 (at 4,0 MB)
                   2'b10: flash_addr <= 22'h3C0000; // Kickstart 3.2 (at 7,5 MB)
 			  	  2'b11: flash_addr <= 22'h380000; // Kickstart 1.2 (at 7,0 MB, 256k)
